@@ -13,12 +13,10 @@ Download one and follow the
 What every key does is in the
 [README](https://github.com/jhob101/uconsole-bb9900-keyboard#what-it-does).
 
-## New in 1.5.1
+## New in 1.5.2
 
-- **Fixes the trackpad not registering a finger** on some keyboards, reported
-  on 1.3.0 to 1.5.0. The cause was lift detection, which has been removed.
-
-If you were affected, flashing this is all that is needed.
+- **Horizontal scrolling goes the right way.** It was reversed: moving your
+  finger left scrolled right.
 
 ## Before you flash
 
