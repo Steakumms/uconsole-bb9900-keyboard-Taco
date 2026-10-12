@@ -144,6 +144,9 @@
     // oneshot(altgr) and oneshot(kittymod)). Tap = applies to the next key
     // only; hold = behaves as a normal modifier / momentary layer.
     // keyd has no one-shot timeout; ZMK requires one, so it is set long.
+    // Tapping an armed one-shot again cancels it (cancel-on-retap), and a
+    // mouse click or a trackpad scroll uses it up as a key would
+    // (release-on-mouse). Both are additions in the ZMK fork.
     behaviors {
         osm: oneshot_mod {
             compatible = "zmk,behavior-sticky-key";
@@ -152,6 +155,8 @@
             bindings = <&kp>;
             quick-release;
             ignore-modifiers;
+            cancel-on-retap;
+            release-on-mouse;
         };
         osl: oneshot_layer {
             compatible = "zmk,behavior-sticky-key";
@@ -160,6 +165,8 @@
             bindings = <&mo>;
             quick-release;
             ignore-modifiers;
+            cancel-on-retap;
+            release-on-mouse;
         };
     };
 
