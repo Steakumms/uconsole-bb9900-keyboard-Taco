@@ -13,10 +13,13 @@ Download one and follow the
 What every key does is in the
 [README](https://github.com/jhob101/uconsole-bb9900-keyboard#what-it-does).
 
-## New in 1.5.2
+## New in 1.6.0
 
-- **Horizontal scrolling goes the right way.** It was reversed: moving your
-  finger left scrolled right.
+- **Trackpad light on/off with Fn + `/`.** The choice is remembered. The light
+  also goes off while the keyboard is locked.
+- **One-shot modifiers are easier to get out of.** Tap one again to cancel it.
+  A click or a scroll now uses it up, as a key press does, so a stray Shift no
+  longer turns every scroll sideways.
 
 ## Before you flash
 

@@ -64,13 +64,15 @@ except that there is no D-pad pointer and no kitty key.
 
 ### One-shot modifiers
 
-Tap Shift, Ctrl, Alt or AltGr and it applies to the next key only. Holding
-works as normal. An unused tap expires after 60 seconds.
+Tap Shift, Ctrl, Alt or AltGr and it applies to the next key, click or scroll
+only. Tap it again to cancel. Holding works as normal. An unused tap expires
+after 60 seconds.
 
 ### Kitty key
 
 A is a one-shot Ctrl+Shift for the [kitty](https://sw.kovidgoyal.net/kitty/)
-terminal: tap A, then C, for Ctrl+Shift+C. Holding A works too. It covers:
+terminal: tap A, then C, for Ctrl+Shift+C. Tap A again to cancel. Holding A
+works too. It covers:
 
 - Letters `Q W E R T P S F G H J K L X C V B N M`
 - `Enter`, the arrow keys, `[ ] / - = , .`
@@ -93,6 +95,7 @@ Either Fn key works unless a row says otherwise.
 | Fn + I | Insert |
 | Fn + `,`, Fn + `.` | Screen brightness down, up |
 | Fn + Space | Key backlight on/off. It turns itself off after 30 seconds idle. |
+| Fn + `/` | Trackpad light on/off (remembered) |
 | Fn + Speaker | Mute |
 | Fn + Select | Print |
 | Fn + Start | Media pause |
@@ -128,7 +131,8 @@ cmake .. -DBUILD_SDL_JSTEST=OFF -DBUILD_SDL3_JSTEST=OFF && make
 ### Lock
 
 Fn + Esc locks the keyboard for carrying the uConsole around: keys, mouse
-buttons and trackpad are ignored and the backlight goes off. Release Fn, then
+buttons and trackpad are ignored and the key backlight and trackpad light go
+off. Release Fn, then
 Fn + Esc again to unlock. It does not blank the screen, and the keyboard always
 starts unlocked.
 
@@ -161,7 +165,8 @@ Added here:
   pointer backwards. Pointer speed is up 20%.
 - Gentler scrolling that follows your finger speed: slow movement scrolls
   slowly.
-- The trackpad light shows scroll mode.
+- The trackpad light shows scroll mode, and can be switched off.
+- One-shot modifiers cancel on a second tap and clear after a click or scroll.
 - Bluetooth off.
 - Fixes: Shift + Speaker no longer leaves Shift stuck, and the bootloader can
   no longer be entered by accident with `\`.
@@ -292,7 +297,8 @@ Common changes:
 | Y, X, B and A | `Y_KEY`, `X_KEY`, `B_KEY` and `A_KEY` at the top of the keymap |
 | Pointer speed | `CONFIG_TRACKPAD_SPEEDMULTIPLIER_HORIZONTAL` and `_VERTICAL`, in percent |
 | Scroll speed | `CONFIG_TRACKPAD_SCROLL_SPEED`, in percent |
-| Trackpad light | `CONFIG_ZMK_TRACKPAD_SCROLL_LIGHT`: `n` leaves it alone |
+| Trackpad light on another key | `&tp_light TPL_TOG` toggles it. `TPL_ON` and `TPL_OFF` set it. |
+| Trackpad light left alone entirely | `CONFIG_ZMK_TRACKPAD_SCROLL_LIGHT=n` |
 | Backlight auto-off delay | `CONFIG_ZMK_IDLE_TIMEOUT`, in milliseconds |
 | One-shot timeout | `release-after-ms` on `osm` and `osl` in the keymap |
 | Kitty key list | `kitty_layer` in the keymap |
