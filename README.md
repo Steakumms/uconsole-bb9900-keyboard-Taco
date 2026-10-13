@@ -165,7 +165,8 @@ Added here:
   pointer backwards. Pointer speed is up 20%.
 - Gentler scrolling that follows your finger speed: slow movement scrolls
   slowly.
-- The trackpad light shows scroll mode, and can be switched off.
+- The trackpad light shows scroll mode, can be switched off, and goes out
+  while the uConsole sleeps (with the [sleep service](#sleep-with-the-power-button)).
 - One-shot modifiers cancel on a second tap and clear after a click or scroll.
 - Bluetooth off.
 - Fixes: Shift + Speaker no longer leaves Shift stuck, and the bootloader can
@@ -280,6 +281,14 @@ stop it, or the two will stack:
 ```sh
 sudo systemctl disable --now keyd
 ```
+
+### Sleep with the power button
+
+[jhob101/uconsole-sleep-hack2you-kb-2.1](https://github.com/jhob101/uconsole-sleep-hack2you-kb-2.1)
+is a sleep service for the uConsole that supports this keyboard. When the
+screen goes off it also puts the trackpad light out, and brings it back on
+wake. It does this through the keyboard's Kana LED, which this firmware treats
+as "hold the light off".
 
 ## Customising
 

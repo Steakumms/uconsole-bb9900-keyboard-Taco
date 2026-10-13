@@ -13,13 +13,12 @@ Download one and follow the
 What every key does is in the
 [README](https://github.com/jhob101/uconsole-bb9900-keyboard#what-it-does).
 
-## New in 1.6.0
+## New in 1.7.0
 
-- **Trackpad light on/off with Fn + `/`.** The choice is remembered. The light
-  also goes off while the keyboard is locked.
-- **One-shot modifiers are easier to get out of.** Tap one again to cancel it.
-  A click or a scroll now uses it up, as a key press does, so a stray Shift no
-  longer turns every scroll sideways.
+- **The trackpad light goes out while the uConsole sleeps**, when you use
+  [jhob101/uconsole-sleep-hack2you-kb-2.1](https://github.com/jhob101/uconsole-sleep-hack2you-kb-2.1)
+  to sleep with the power button. It comes back on wake, unless the keyboard
+  is locked.
 
 ## Before you flash
 
