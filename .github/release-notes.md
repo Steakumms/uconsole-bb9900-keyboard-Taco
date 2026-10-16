@@ -23,14 +23,14 @@ What every key does is in the
 - **Using the trackpad keeps the lights on.** Before, only key presses counted
   as activity, so the lights could go out mid-use.
 
-## After you flash
-
-If you use the sleep service, shut the uConsole down and power it back on
-before you next sleep it with the power button. A reboot is not enough.
-Otherwise the keyboard does not come back when the power button wakes it.
-
 ## Before you flash
 
 Back up the firmware you are running now before you flash (copy `CURRENT.UF2`
 off the bootloader drive). This is a spare-time project, tested on one
 keyboard: flash at your own risk.
+
+## After you flash
+
+If you use the sleep service, shut the uConsole down and power it back on
+before you next sleep it with the power button. A reboot is not enough.
+Otherwise the keyboard does not come back when the power button wakes it.
