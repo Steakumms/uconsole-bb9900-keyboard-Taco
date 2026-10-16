@@ -13,12 +13,15 @@ Download one and follow the
 What every key does is in the
 [README](https://github.com/jhob101/uconsole-bb9900-keyboard#what-it-does).
 
-## New in 1.7.0
+## New in 1.8.0
 
-- **The trackpad light goes out while the uConsole sleeps**, when you use
-  [jhob101/uconsole-sleep-hack2you-kb-2.1](https://github.com/jhob101/uconsole-sleep-hack2you-kb-2.1)
-  to sleep with the power button. It comes back on wake, unless the keyboard
-  is locked.
+- **The key backlight also goes out while the uConsole sleeps**, along with
+  the trackpad light, when you use
+  [jhob101/uconsole-sleep-hack2you-kb-2.1](https://github.com/jhob101/uconsole-sleep-hack2you-kb-2.1).
+- **The trackpad light goes out when idle**, with the key backlight, and comes
+  back on the next key press or trackpad movement.
+- **Using the trackpad keeps the lights on.** Before, only key presses counted
+  as activity, so the lights could go out mid-use.
 
 ## Before you flash
 

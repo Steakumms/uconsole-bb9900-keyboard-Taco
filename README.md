@@ -95,7 +95,7 @@ Either Fn key works unless a row says otherwise.
 | Fn + I | Insert |
 | Fn + `,`, Fn + `.` | Screen brightness down, up |
 | Fn + Space | Key backlight on/off. It turns itself off after 30 seconds idle. |
-| Fn + `/` | Trackpad light on/off (remembered) |
+| Fn + `/` | Trackpad light on/off (remembered). Like the key backlight, it goes out after 30 seconds idle. |
 | Fn + Speaker | Mute |
 | Fn + Select | Print |
 | Fn + Start | Media pause |
@@ -165,8 +165,9 @@ Added here:
   pointer backwards. Pointer speed is up 20%.
 - Gentler scrolling that follows your finger speed: slow movement scrolls
   slowly.
-- The trackpad light shows scroll mode, can be switched off, and goes out
-  while the uConsole sleeps (with the [sleep service](#sleep-with-the-power-button)).
+- The trackpad light shows scroll mode, can be switched off, and goes out when
+  idle. Both lights go out while the uConsole sleeps (with the
+  [sleep service](#sleep-with-the-power-button)).
 - One-shot modifiers cancel on a second tap and clear after a click or scroll.
 - Bluetooth off.
 - Fixes: Shift + Speaker no longer leaves Shift stuck, and the bootloader can
@@ -286,9 +287,9 @@ sudo systemctl disable --now keyd
 
 [jhob101/uconsole-sleep-hack2you-kb-2.1](https://github.com/jhob101/uconsole-sleep-hack2you-kb-2.1)
 is a sleep service for the uConsole that supports this keyboard. When the
-screen goes off it also puts the trackpad light out, and brings it back on
-wake. It does this through the keyboard's Kana LED, which this firmware treats
-as "hold the light off".
+screen goes off it also puts the trackpad light and key backlight out, and
+brings them back on wake. It does this through the keyboard's Kana LED, which
+this firmware treats as "hold the lights off".
 
 ## Customising
 
