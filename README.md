@@ -268,6 +268,11 @@ The keyboard cannot type while in its bootloader, so use SSH or a USB keyboard.
    sudo cp bb9900-zmk.uf2 /mnt/ && sync
    ```
 
+6. **If you use the [sleep service](#sleep-with-the-power-button), shut the
+   uConsole down and power it back on** before you next sleep it with the
+   power button. A reboot is not enough. Otherwise the keyboard does not come
+   back when the power button wakes it.
+
 To leave the bootloader without changing anything, or if the keyboard does not
 come back, enter the bootloader again and copy your backup over.
 
@@ -290,6 +295,10 @@ is a sleep service for the uConsole that supports this keyboard. When the
 screen goes off it also puts the trackpad light and key backlight out, and
 brings them back on wake. It does this through the keyboard's Kana LED, which
 this firmware treats as "hold the lights off".
+
+After flashing new firmware, shut the uConsole down and power it back on (not
+a reboot) before using the power button to sleep. Otherwise the keyboard does
+not come back on wake.
 
 ## Customising
 
